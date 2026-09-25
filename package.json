@@ -1,0 +1,12 @@
+{
+  "name": "meera-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Telegram note -> score -> news angle -> LinkedIn draft in Meera's voice. Meera approves and publishes herself.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "try": "node --env-file=.env scripts/try-note.js",
+    "sync-voice": "node --env-file=.env scripts/sync-voice.js"
+  }
+}
