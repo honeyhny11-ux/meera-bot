@@ -32,7 +32,7 @@ Meera sends a note to a Telegram bot. The bot:
 3. **Supabase:** open SQL Editor, paste `supabase/schema.sql` and run it. Copy the Project URL and the service_role/secret key from Project Settings → API Keys.
 4. **Test locally:** `npm run try -- "a strong note"`.
 5. **Deploy:** push to GitHub, import the repo in Vercel, add every `.env` variable under Environment Variables, and deploy.
-6. **Connect Telegram:** open this URL in a browser:
+6. **Connect Telegram:** `npm run set-webhook -- https://<your-app>.vercel.app` (or open this URL in a browser):
    `https://api.telegram.org/bot<TOKEN>/setWebhook?url=https://<your-app>.vercel.app/api/webhook&secret_token=<TELEGRAM_WEBHOOK_SECRET>`
    It should return `"ok":true`. Leave off `&secret_token=...` if you didn't set a secret.
 7. Send the bot `/start`. It replies with your chat id, which you can put in `ALLOWED_CHAT_ID` so only you can use it.
